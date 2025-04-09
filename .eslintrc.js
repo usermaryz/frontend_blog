@@ -9,6 +9,15 @@ module.exports = {
 		react: {
 			version: 'detect',
 		},
+		'import/resolver': {
+			alias: {
+				map: [
+					['fonts', './src/fonts'],
+					['src', './src'],
+					['components', './src/components'],
+				],
+			},
+    	},
 	},
 	extends: [
 		'plugin:@typescript-eslint/recommended',
@@ -21,6 +30,7 @@ module.exports = {
 		'plugin:import/typescript',
 		'plugin:jsx-a11y/recommended',
 		'plugin:eslint-comments/recommended',
+		'plugin:eslint-import-resolver-webpack',
 	],
 	rules: {
 		semi: [2, 'always'],
